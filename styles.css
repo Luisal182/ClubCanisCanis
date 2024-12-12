@@ -203,7 +203,7 @@ p{
 #imageContainer:hover {
     border-color: rgba(52, 152, 219, 0.7); /* Slightly more visible on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transform: scale(1.02); /* Subtle zoom on hover */
+    transform: scale(1.06); /* Subtle zoom on hover */
 }
 
 #dogImage:hover {
