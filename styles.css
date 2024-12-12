@@ -4,7 +4,7 @@
 
 .hero {
     width: 100%;
-    max-width: 1000px; /* Max width set to 900px for large screens */
+    max-width: 900px; /* Max width set to 900px for large screens */
     height: 100vh; /* Full viewport height */
     background-image: url('https://api.thedogapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=1');
     background-size: cover; /* Ensures the image covers the entire hero section */
