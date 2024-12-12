@@ -1,5 +1,5 @@
 
-
+//--------------------------hero.random.Image---------------------------------//
 document.addEventListener('DOMContentLoaded', function () {
     const heroSection = document.querySelector('.hero');
     
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fetchBackgroundImage();
 });
 
-//----------------------------- First Button---------------------------
+//----------------------------- -----First Button-------------------------------------//
 const fetchButtonAffenpinscher = document.getElementById('fetchButtonAffenpinscher');
 const dogImage = document.getElementById('dogImage');
 const dogInfo = document.getElementById('dogInfo');
@@ -106,7 +106,7 @@ fetchButtonAffenpinscher.addEventListener('click', function() {
         });
 });
 
-// -----------------------Second Button: Fetch a random dog breed image and display breed info-------------------
+// -----------------------Second Button: Fetch a random dog breed image and display breed info------------------------//
 const fetchButtonRandomBreed = document.getElementById('fetchButtonRandomBreed');
 const imageContainer = document.getElementById('imageContainer');
 const breedInfo = document.getElementById('breedInfo');
@@ -117,7 +117,7 @@ const breedInfoDatabase = {
   "bulldog": "Bulldogs are muscular, stocky dogs with a gentle disposition. Known for their wrinkled faces and calm nature, they are great companions for families and individuals alike.",
   "poodle": "Poodles are intelligent, highly trainable dogs with a hypoallergenic coat. They come in three sizes: standard, miniature, and toy, and are known for their elegance and playfulness.",
   "labrador": "Labradors are one of the most popular dog breeds. They are friendly, outgoing, and highly trainable, often used as service dogs or for hunting.",
-  // Add more breeds and their descriptions here...
+  // ---write more breeds ......
 };
 
 fetchButtonRandomBreed.addEventListener('click', function() {
@@ -158,7 +158,7 @@ fetchButtonRandomBreed.addEventListener('click', function() {
             const breedDescription = breedInfoDatabase[breed] || 
                 "A unique and fascinating companion, embodying an extraordinary blend of instinct, emotion, and intelligence that transcends simple animal existence. Dogs represent a remarkable species capable of forming deep emotional bonds, communicating complex feelings, and adapting to diverse environments while maintaining an unwavering loyalty that connects them intimately with humans through a language that goes beyond words. Their capacity to sense and respond to human emotions, as well as their remarkable ability to learn and perform tasks, makes them invaluable not only as pets but also as working animals in roles such as therapy, search-and-rescue, and assistance for people with disabilities. Whether as protectors, playmates, or trusted companions, dogs have a unique ability to enrich our lives with their love, devotion, and presence. Their versatility allows them to thrive in various environments, offering comfort, companionship, and security while intuitively responding to their owners' needs and emotions.";
 
-                breedInfo.innerHTML = `
+            breedInfo.innerHTML = `
                 <div id="breedTitle">
                     <h5>${capitalizedBreed} Breed Information</h5>
                 </div>
@@ -180,30 +180,24 @@ fetchButtonRandomBreed.addEventListener('click', function() {
         });
 });
 
-
-
-
-
-///////-----------------------------------Take out fotos Button 1-------------------------------///////
+// ----------------------------take out   photos button 1--------------------------//
 const cleanFotos = document.getElementById("cleanFotos");
-const dogyImage =  document.getElementById("dogImage");
 
-cleanFotos.addEventListener("click", function(e) {
-  // Remove the dog image completely from the DOM
-  dogImage. src=""
+cleanFotos.addEventListener("click", function() {
+  // Clear the dog image from the DOM
+  const dogImage = document.getElementById("dogImage");
+  if (dogImage) {
+    dogImage.src = "";  // Clears the image source
+  }
 });
 
-/////////--------------------------------take out fotos button random-------------------////////////
-const cleanRandom =  document.getElementById("cleanRandom");
-const randomImage =  document.getElementById("imageContainer");
-const breedRandomInfo = document.getElementById('breedInfo');////////////
+// -----------------------Take out Random button 2------------------------------//
+const cleanRandom = document.getElementById("cleanRandom");
 
-cleanRandom.addEventListener("click", function(e) {
-    // Remove the dog image completely from the DOM
-    randomImage.remove();
-    breedRandomInfo.remove();////////////////////////QUITAR INFO
-
-  });
-
-
-  
+cleanRandom.addEventListener("click", function() {
+    // Clear all images in the image container
+    imageContainer.innerHTML = '';
+    
+    // Clear the breed information
+    breedInfo.innerHTML = '';
+});
